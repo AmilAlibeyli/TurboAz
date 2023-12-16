@@ -870,6 +870,188 @@ h2{
     display: block;
 }
 
+/* Footer */
+
+.footer {
+    background-color: #f1f3f7;
+    border-top: 1px solid #eaebf2;
+}
+.footer-top-link{
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15;
+    color: #212c3a;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.footer-top-link:hover{color: red!important;}
+.footer-top-div{
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+.fa-facebook-f{
+    color: black;
+    margin-right: 20px;
+}
+.fa-instagram{color: black;}
+.fa-envelope{color: black;}
+.fa-phone{color: black;}
+.fa-facebook-f:hover{color: blue!important;}
+.fa-instagram:hover{color: rgb(214, 119, 135)!important;}
+.fa-envelope:hover{color: red!important;}
+.fa-phone:hover{color:rgb(89, 221, 89)!important;}
+
+.footer-menu-all{
+    height: 75px;
+}
+.footer-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-menu-1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    display: inline-block;
+    color: #212c3a;
+    text-decoration: none;
+    margin-bottom: 3px;
+    margin-top: 3px;
+}
+.footer-menu-2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    display: inline-block;
+    color: #212c3a;
+    text-decoration: none;
+    margin-bottom: 3px;
+}
+.footer-bottom-all{
+    background-color: #ca1016;
+    height: 110px;
+}
+.copyright-1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color:white;
+    margin: 5px;
+}
+.copyright{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: white;
+    margin: 5px;
+}
+.footer-bottom{
+    display: flex;
+    flex-direction: column;
+}
+.masın-modelleri{
+    border-top: 2px solid #eaebf2;
+    border-bottom: 2px solid #eaebf2;
+}
+.footer-masınlar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.masın-modelleri-sütunlar{
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:0.9em;
+}
+.masın-adları{
+    color: black;
+}
+@media only screen and (min-width: 768px) {
+        .footer-top-div{
+            color: gray;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin: auto;
+            padding: 0 11px;
+        }
+        .icon-div{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .fa-facebook-f{
+            margin-left: 15px;
+            padding-bottom: 2px;
+            transition: 0.5s;
+        }
+        .fa-instagram{
+            margin-right: 15px;
+            padding: 4px;
+            font-size: 20px;
+            transition: 0.5s;
+        }
+        .fa-envelope{
+            padding: 4px;
+            font-size: 20px;
+            transition: 0.5s;
+        }
+        .fa-phone{
+            padding: 7px;
+            transition: 0.5s;
+        }
+        .footer-menu-all{
+            height: 60px;
+        }
+        .footer-menu{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            padding: 10px;
+        }
+        .footer-menu-1{
+            margin-right: 30px;
+            transition: 0.5s;
+        }
+        .footer-menu-1:hover{color: red!important;}
+        .footer-menu-2{
+            margin-right: 30px;
+            transition: 0.5s;
+        }
+        .footer-menu-2:hover{color: red!important;}
+        .footer-bottom-all{
+            height: 55px;
+        }
+        .footer-bottom{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding:7px;
+        }
+        .footer-masınlar{
+            padding: 10px;
+            display: flex;
+        }
+        .masın-modelleri-sütunlar{
+            display: flex;
+            flex-direction: column;
+        }
+        .masın-adları{
+            padding: 6px 0;
+            color: #8d94ad;
+            transition: 0.5s;
+        }
+        .masın-adları:hover{color: red!important;}
+        .footer-masınlar{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+}
+
 
 
 

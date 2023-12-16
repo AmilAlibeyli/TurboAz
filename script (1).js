@@ -690,7 +690,7 @@ let ban = document.getElementById('ban')
 let town = document.getElementById('town')
 let year = document.getElementById('year')
 let inp1 = document.getElementById('inp1')
-const modal = document.getElementById("modal")
+let modal = document.getElementById("modal")
 const btn = document.getElementById("btn")
 let kilometrs = document.getElementById('kilometrs')
 let motor = document.getElementById('motor')
@@ -850,6 +850,13 @@ btn.addEventListener("click", function () {
     body.style.backgroundColor='rgba(0, 0, 0, 0.7)'
 
 })
+
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 
 
 
