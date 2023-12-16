@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style (1).css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <title>Turbo</title>
+</head>
+
+<body id="body">
+
+    <header>
+        <div class="container">
+            <nav>
+                <div id="nav">
+                    <ul>
+                        <li><a href="https://tap.az/" target="_blank" rel="noopener noreferrer">Tap.az</a></li>
+                        <li><a href="https://bina.az/" target="_blank" rel="noopener noreferrer">Bina.az</a></li>
+                        <li><a href="https://boss.az/" target="_blank" rel="noopener noreferrer">Boss.az</a></li>
+                    </ul>
+                </div>
+                <div id="login">
+                    <div id="help">
+                        <h2>Dəstək: <span class="dst">(012) 505 77 55</span></h2>
+                    </div>
+                    <div id="registr">
+                        <ul>
+                            <li><a href="#Help">Yardım</a></li>
+                            <li><a href="#lang">RU</a></li>
+                            <li><a href="#Favory"><i class="fa-solid fa-heart"></i>Seçilmişlər</a></li>
+                            <li><a href="#User"><i class="fa-regular fa-user"></i>Giriş</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+    </header>
+
+    <div class="container">
+        <div class="navbar">
+            <div>
+                <img src="img/logo.svg" alt="">
+            </div>
+            <div class="navigation">
+                <a href="#">Bütün elanlar</a>
+                <a href="#">Salonlar</a>
+                <a href="#" class="moto">Moto</a>
+                <div class="ehtiyyat-li">
+                    <a href="#">Ehtiyyat hissələr və aksesuarlar</a>
+                    <div id="ehtiyyat-hisseler-content">
+                        <ul class="li-a">
+                            <li style="display: block;"><a class="ehtiyyat-a" href="#">Aksesuarlar</a></li>
+                            <li style="display: block;"><a class="ehtiyyat-a" href="#">Audio və video texnikalar</a>
+                            </li>
+                            <li style="display: block;"><a class="ehtiyyat-a" href="#">Avtokosmetika və avtokimya</a>
+                            </li>
+                            <li style="display: block;"><a class="ehtiyyat-a" href="#">Ehtiyyat hissələr</a></li>
+                            <li style="display: block;"><a class="ehtiyyat-a" href="#">GPS navigatorlar</a></li>
+                            <li style="display: block;"><a class="ehtiyyat-a" href="#">Qeydiyyat nişanları</a></li>
+                            <li style="display: block;"><a class="ehtiyyat-a" href="#">Siqnalizasiyalar</a></li>
+                            <li style="display: block;"><a class="ehtiyyat-a" href="#">Videoqeydiyyatçılar</a></li>
+                            <li style="display: block;"><a class="ehtiyyat-a" href="#">Şinlər, disklər ve təkərlər</a>
+                            </li>
+                            <li style="display: block;"><a class="ehtiyyat-a" href="#">Digər</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="icare-li">
+                    <a href="#">İcarə</a>
+                    <div id="icare-content">
+                        <ul class="li-a-2">
+                            <li style="display: block;"><a class="icare-a">Avtomobillər</a></li>
+                            <li style="display: block;"><a class="icare-a">Avtobus ve mikroavtobuslar</a></li>
+                            <li style="display: block;"><a class="icare-a">Motosiklər ve mopedlər</a></li>
+                            <li style="display: block;"><a class="icare-a">Xüsusi texnika</a></li>
+                            <li style="display: block;"><a class="icare-a">Digər</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <button id="btn" class="elan"> ⊕ Yeni elan</button>
+        </div>
+        <section id="filterarea">
+            <div class="container">
+                <div class="markaprice">
+                    <div class="marka">
+                        <select onchange="getAllModel()" id="markaSelect" style="font-size: 20px;" name="" id="aalaa">
+                            <option style="font-size: 20px;" value="" selected disabled>Marka</option>
+                        </select>
+                    </div>
+                    <div class="price">
+                        <label id="minPriceLabel" for="minPriceInput">Qiymet , min.</label>
+                        <input name="minPriceInput" id="minPriceInput" style="border-right: 1px solid #EBEDF3;"
+                            type="number" />
+                        <label id="maxPriceLabel" for="maxPriceInput">Max.</label>
+                        <input id="maxPriceInput" type="number" />
+                    </div>
+                </div>
+
+                <div class="modelKredBartValut">
+                    <div class="model">
+                        <select style="font-size: 20px;" id="aalaa">
+                            <option value="" selected disabled>Model</option>
+                        </select>
+                    </div>
+                    <div class="kredBartValut">
+                        <select name="" id="valyuta">
+                            <option value="AZN" selected> AZN</option>
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                        </select>
+                        <label id="kredLabel" for="kredRadio">
+                            Kredit
+                            <input style="display: none;" id="kredRadio" type="checkbox">
+                        </label>
+
+                        <label id="bartLabel" for="bartRadio">
+                            Barter
+                            <input style="display: none;" id="bartRadio" type="checkbox">
+                        </label>
+
+                    </div>
+                </div>
+
+                <div class="novelBanType">
+                    <div class="novelOldAll">
+                        <label onclick="changeNovel(`AllNovelLabel`)" class="activeNovel" id="AllNovelLabel">
+                            Hamısı
+                        </label>
+                        <input id="AllNovelInput" name="A" checked type="radio" style="display: none;" />
+
+                        <label onclick="changeNovel(`NewNovelLabel`)" id="NewNovelLabel">
+                            Yeni
+                        </label>
+                        <input id="NewNovelInput" name="A" type="radio" style="display: none;" />
+
+                        <label onclick="changeNovel(`OldNovelLabel`)" id="OldNovelLabel">
+                            Sürülmüş
+                        </label>
+                        <input id="OldNovelInput" name="A" type="radio" style="display: none;" />
+
+                    </div>
+                    <div class="banTypes">
+                        <select style="font-size: 18px;" name="" id="banTypes">
+                            <option style="font-size: 18px;" value="" selected disabled>Ban növü</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="cityYear">
+                    <div class="cityDiv">
+                        <select name="" id="citiesSelect">
+                            <option value="" selected disabled>Şəhər</option>
+                        </select>
+                    </div>
+                    <div class="minMaxYear">
+                        <div class="minDivYear">
+                            <select name="" id="minYearSelect">
+                                <option value="">min year</option>
+                            </select>
+                        </div>
+                        <div class="maxDivYear">
+                            <select name="" id="maxYearSelect">
+                                <option value="">max year</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="findReset">
+                    <button id="resetInputsButton" onclick="resetInputs()">Sıfırla</button>
+                    <button onclick="getElan()" id="findCars">Elanları göstər</button>
+                </div>
+            </div>
+        </section>
+        <section id="filteredCars">
+            <div class="container">
+                <div id="cards"></div>
+            </div>
+        </section>
+
+    </div>
+
+    <div id="modal" class="modal">
+        <span onclick="delModal()"
+            style="font-size: 35px; font-family: Arial, Helvetica, sans-serif; position: absolute ; left: 95%; cursor: pointer; ">x</span>
+        <div class="container2">
+            <div id="headbox">
+                <h2>ELAN YERLƏŞDİRMƏK</h2>
+            </div>
+
+
+            <div id="cont-bottom">
+                <ul id="cond">
+                    <li>Üç ay ərzində bir nəqliyyat vasitəsi yalnız bir dəfə pulsuz dərc oluna bilər.</li>
+                    <li>Üç ay ərzində təkrar və ya oxşar elanlar (marka/model, rəng) ödənişlidir.</li>
+                    <li>Elanınızı saytın ön sıralarında görmək üçün "İrəli çək" xidmətindən istifadə edin.</li>
+                </ul>
+
+                <ul id="inputs">
+
+
+                    <div id="left">
+                        <li> Marka <select class="m-inp" required id="marka" onchange="getModel()"></select></li>
+                        <li> Model <select class="m-inp" required id="model"></select></li>
+                        <li> City <select class="m-inp" required id="town"></select></li>
+                        <!-- <li>Motor<input id="motor" type="number"></li> -->
+                        <li>Motor<input class="m-inp" id="motor" type="number"></li>
+                        <li>Kilometrs<input class="m-inp" id="kilometrs" type="number"></li>
+                        <li> Credit <select class="m-inp" required id="valyuta">
+                            <option value=""></option>
+                            <option value="1">AZN</option>
+                            <option value="1">EUR</option>
+                            <option value="1">USD</option>
+                        </select></li>
+                    </div>
+                    <div id="right">
+                        <li> Credit <select class="m-inp" required id="credit">
+                                <option value=""></option>
+                                <option value="1">True</option>
+                                <option value="1">False</option>
+                            </select></li>
+                        <li> Novel <select class="m-inp" required id="novel">
+                                <option value=""></option>
+                                <option value="1">True</option>
+                                <option value="1">False</option>
+                            </select></li>
+                        
+                        <li> Barter <select class="m-inp" required id="barter">
+                                <option value="1"></option>
+                                <option value="1">True</option>
+                                <option value="1">False</option>
+                            </select></li>
+                        <li> Ban <select class="m-inp" required id="ban"></select></li>
+                        <li> Year <select class="m-inp" required id="year">
+                                <option value="" selected disabled></option>
+                            </select></li>
+                        <li>Price <input class="m-inp" id="price" type="number"></li>
+
+                </ul>
+
+                <p id="sekil">Şəkillər</p>
+
+                <div id="pic-box">
+                    <ul id="pic-text">
+                        <li>-Minimum – 3 şəkil (ön, arxa və bütöv ön <br> panelin görüntüsü mütləqdir).</li>
+                        <li>- Maksimum – 21 şəkil.</li>
+                        <li>- Optimal ölçü – 1024x768 piksel.</li>
+                    </ul>
+
+                    <div id="imgs">
+                        <input id="inp1" class="pic m-inp" type="text">
+
+                    </div>
+                </div>
+            </div>
+
+            <button onclick="createCar()" id="add-btn">CREATE</button>
+        </div>
+    </div>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/e29b1b43d1.js" crossorigin="anonymous"></script>
+    <script src="/script (1).js"></script>
+</body>
+
+</html>
